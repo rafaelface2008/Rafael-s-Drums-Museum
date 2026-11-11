@@ -1,0 +1,49 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <tr><a href="/bateria"> ← Voltar </a></tr>
+        <h3>Nova Bateria</h3>
+
+        <form method="post">
+            <p>ID</p>
+            <input type="text" name="id" value="<%=bateria.id%>">
+            <p>Nome</p>
+            <input name="nome" type="text" placeholder="Nome da bateria...">
+            <p>Marca</p>
+            <input name="marca" type="text" placeholder="Marca da bateria...">
+            <p>Cor</p>
+            <input name="cor" type="text" placeholder="Cor da bateria...">
+            <br>
+            <select name="madeira">
+                <option value="">Selecione...</option>
+                <option value="Maple">Maple</option>
+                <option value="Birch">Birch</option>
+                <option value="Mahogany">Mahogany</option>
+                <option value="Poplar">Poplar</option>
+                <option value="Basswood">Basswood</option>
+                <option value="Beech">Beech</option>
+                <option value="Oak">Oak</option>
+                <option value="Walnut">Walnut</option>
+                <option value="Bubinga">Bubinga</option>
+                <option value="Cherry">Cherry</option>
+            </select>
+            <br>
+            <p>Ano que foi feito</p>
+            <input type="number" value="2026" name="anoFeito">
+            <br>
+            <p>Preço</p>
+            <input type="number" value="0" name="preco" step="0.01" min="0" placeholder="0.00">
+            <br>
+            <p>Descrição</p>
+            <textarea placeholder="Descrição da bateria..." name="descricao"></textarea>
+            <br><br>
+
+            <button type="submit">Adicionar</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

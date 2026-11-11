@@ -1,0 +1,33 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <tr><a href="../baterista"> ← Voltar </a></tr>
+        <h3>Novo Baterista</h3>
+
+        <form method="post">
+            <p>Nome</p>
+            <input name="nome" type="text" placeholder="Nome do baterista...">
+            <p>idade</p>
+            <input type="number" value="0" name="idade">
+            <p>Marca da bateria</p>
+            <input name="bateria" type="text" placeholder="bateria...">
+            <br>
+            <p>Marca das baquetas</p>
+            <input name="baqueta" type="text" placeholder="baqueta...">
+            <br>
+            <p>Marca dos pratos</p>
+            <input name="prato" type="text" placeholder="prato...">
+            <br>
+            <p>Descrição</p>
+            <textarea placeholder="Descrição do Baterista..." name="descricao"></textarea>
+            <br><br>
+
+            <button type="submit">Adicionar</button>
+            <button type="reset">Cancelar</button>
+
+        </form>
+
+    </div>
+    </body>
+
+    </html>

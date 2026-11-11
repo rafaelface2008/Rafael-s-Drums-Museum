@@ -1,0 +1,70 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Baterias</h3>
+        <p>Gerencie as Baterias cadastradas no site</p>
+        <a href="/bateria/add">+ Nova Bateria</a><br><br>
+
+        <table>
+            <tr>
+                <td>
+                    Nome
+                </td>
+                <td>
+                    Marca
+                </td>
+
+                <td>
+                    <h3>Cor</h3>
+                </td>
+                <td>
+                    <h3>Madeira</h3>
+                </td>
+                <td>
+                    <h3>Ano</h3>
+                </td>
+                <td>
+                    <h3>Preço</h3>
+                </td>
+                <td>
+                    <h3>Descrição</h3>
+                </td>
+                <td>
+                    <h3>Ações</h3>
+                </td>
+            </tr>
+            <%baterias.forEach(bateria=>{%>
+                <tr>
+                    <td>
+                        <%=bateria.nome%>
+                    </td>
+                    <td>
+                        <%=bateria.marca%>
+                    </td>
+                    <td>
+                        <%=bateria.cor%>
+                    </td>
+                    <td>
+                        <%=bateria.madeira%>
+                    </td>
+                    <td>
+                        <%=bateria.anoFeito%>
+                    </td>
+                    <td>
+                        <%=Number(bateria.preco).toLocaleString('pt-BR', { style: 'currency' , currency: 'BRL' })%>
+                    </td>
+                    <td>
+                        <%=bateria.descricao%>
+                    </td>
+                    <td>
+                        <a href="/bateria/upd/<%=bateria.id%>">✏️</a>
+                        <a href="/bateria/del/<%=bateria.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>

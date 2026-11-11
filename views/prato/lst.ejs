@@ -1,0 +1,64 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Pratos</h3>
+        <p>Gerencie os Pratos cadastradas no site</p>
+        <a href="/prato/add">+ Novo prato</a><br><br>
+
+        <table>
+            <tr>
+                <td>
+                    Marca
+                </td>
+                <td>
+                    série
+                </td>
+
+                <td>
+                    <h3>Liga</h3>
+                </td>
+                <td>
+                    <h3>Tipo</h3>
+                </td>
+                <td>
+                    <h3>Preço</h3>
+                </td>
+                <td>
+                    <h3>Descrição</h3>
+                </td>
+                <td>
+                    <h3>Ações</h3>
+                </td>
+            </tr>
+            <%pratos.forEach(prato=>{%>
+                <tr>
+                    <td>
+                        <%=prato.marca%>
+                    </td>
+                    <td>
+                        <%=prato.serie%>
+                    </td>
+                    <td>
+                        <%=prato.liga%>
+                    </td>
+                    <td>
+                        <%=prato.tipo%>
+                    </td>
+                    <td>
+                        <%=prato.preco%>
+                    </td>
+                    <td>
+                        <%=prato.descricao%>
+                    </td>
+                    <td>
+                        <a href="/prato/upd/<%=prato.id%>">✏️</a>
+                        <a href="/prato/del/<%=prato.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>

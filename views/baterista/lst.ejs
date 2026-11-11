@@ -1,0 +1,64 @@
+<%- include('../cabecalho')%>
+
+    <div>
+        <h3>Bateristas</h3>
+        <p>Gerencie os Bateristas cadastradas no site</p>
+        <a href="/baterista/add">+ Novo Baterista</a><br><br>
+
+        <table>
+            <tr>
+                <td>
+                    Nome
+                </td>
+                <td>
+                    Idade
+                </td>
+
+                <td>
+                    <h3>Bateria</h3>
+                </td>
+                <td>
+                    <h3>Baquetas</h3>
+                </td>
+                <td>
+                    <h3>Pratos</h3>
+                </td>
+                <td>
+                    <h3>Descrição</h3>
+                </td>
+                <td>
+                    <h3>Ações</h3>
+                </td>
+            </tr>
+            <%bateristas.forEach(baterista=>{%>
+                <tr>
+                    <td>
+                        <%=baterista.nome%>
+                    </td>
+                    <td>
+                        <%=baterista.idade%>
+                    </td>
+                    <td>
+                        <%=baterista.bateria%>
+                    </td>
+                    <td>
+                        <%=baterista.baqueta%>
+                    </td>
+                    <td>
+                        <%=baterista.prato%>
+                    </td>
+                    <td>
+                        <%=baterista.descricao%>
+                    </td>
+                    <td>
+                        <a href="/baterista/upd/<%=baterista.id%>">✏️</a>
+                        <a href="/baterista/del/<%=baterista.id%>">🗑️</a>
+                    </td>
+                </tr>
+                <%})%>
+
+        </table>
+    </div>
+    </body>
+
+    </html>
