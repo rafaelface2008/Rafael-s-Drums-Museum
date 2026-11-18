@@ -98,6 +98,27 @@ app.post('/prato/upd/:id', async (req, res) => {
     const pratos = await Prato.find();
  res.render("prato/lst",{pratos})
 })
+app.post('/bateria/lst', async (req, res) => {
+  const { pesquisar } = req.body;
+  const baterias = await Bateria.find({
+    nome: new RegExp(pesquisar, 'i')
+  });
+  res.render("bateria/lst", { baterias });
+})
+app.post('/baterista/lst', async (req, res) => {
+  const { pesquisar } = req.body;
+  const bateristas = await Baterista.find({
+    nome: new RegExp(pesquisar, 'i')
+  });
+  res.render("baterista/lst", { bateristas });
+})
+app.post('/prato/lst', async (req, res) => {
+  const { pesquisar } = req.body;
+  const pratos = await Prato.find({
+    marca: new RegExp(pesquisar, 'i')
+  });
+  res.render("prato/lst", { pratos });
+})
 app.listen(PORT, () => {
     console.log(`servidor rodando em http://localhost:${PORT}`);
 });

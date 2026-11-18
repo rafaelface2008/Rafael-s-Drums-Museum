@@ -4,7 +4,10 @@
         <h3>Bateristas</h3>
         <p>Gerencie os Bateristas cadastradas no site</p>
         <a href="/baterista/add">+ Novo Baterista</a><br><br>
-
+        <form method="post" action="/baterista/lst">
+            <input type="text" name="pesquisar" placeholder="Nome do baterista">
+            <input type="submit" value="Buscar">
+        </form>
         <table>
             <tr>
                 <td>

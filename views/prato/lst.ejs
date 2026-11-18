@@ -4,7 +4,10 @@
         <h3>Pratos</h3>
         <p>Gerencie os Pratos cadastradas no site</p>
         <a href="/prato/add">+ Novo prato</a><br><br>
-
+        <form method="post" action="/prato/lst">
+            <input type="text" name="pesquisar" placeholder="Nome do prato">
+            <input type="submit" value="Buscar">
+        </form>
         <table>
             <tr>
                 <td>

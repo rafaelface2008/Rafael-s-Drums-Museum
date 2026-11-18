@@ -4,7 +4,10 @@
         <h3>Baterias</h3>
         <p>Gerencie as Baterias cadastradas no site</p>
         <a href="/bateria/add">+ Nova Bateria</a><br><br>
-
+        <form method="post" action="/bateria/lst">
+            <input type="text" name="pesquisar" placeholder="Nome da Bateria">
+            <input type="submit" value="Buscar">
+        </form>
         <table>
             <tr>
                 <td>
